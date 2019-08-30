@@ -1,0 +1,17 @@
+body {
+    background-color: #ffdfdf;
+}
+a {
+    color: #fb929e;
+}
+
+a:hover {
+    color: #696464;
+}
+table,th,td {
+    border: 1px solid white;
+}
+
+
+
+

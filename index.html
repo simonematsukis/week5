@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style>
+        table,th,td {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1> Welcome
+        <%= username%>
+    </h1>
+    </br>
+    <h3>The available cars are:
+        <table>
+            <tr>
+                <td>ID</td>
+                <td>Maker</td>
+                <td>Model</td>
+                <td>Year</td>
+            </tr>
+            <% for ( var i =0; i< carDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= carDb[i].carId %>
+                    </td>
+                    <td>
+                        <%= carDb[i].carMake %>
+                    </td>
+                    <td>
+                        <%= carDb[i].carModel %>
+                    </td>
+                    <td>
+                        <%= carDb[i].carYear %>
+                    </td>
+                </tr>
+                <% }%>
+    </h3>
+</body>
+</html>

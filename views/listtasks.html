@@ -1,0 +1,36 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Lab4.js"></script>
+</head>
+<body>
+        <img src="lab4.png">
+    <h1>List All Tasks</h1>
+    <h3>Tasks to do:
+        <table>
+            <tr>
+                <td>Name</td>
+                <td>Due Date</td>
+                <td>Description</td>
+            </tr>
+            <% for (var i=0; i< taskDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= taskDb[i].name %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].dueDate %>
+                    </td>
+                    <td>
+                        <%= taskDb[i].description %>
+                    </td>
+                    
+                </tr>
+                <% }%>
+            </table>
+    </h3>
+
+    <a href="/">Home</a>
+    <a href="newtask.html">Add new Tasks</a>
+</body>
+</html>
