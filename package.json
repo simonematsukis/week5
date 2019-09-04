@@ -10,11 +10,22 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.19.0",
-    "ejs": "^2.6.2",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
+    "mongodb": "^3.3.2",
+    "morgan": "^1.9.1",
     "resolve-path": "^1.4.0",
     "url-parse": "^1.4.7"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simonematsukis/week5.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/simonematsukis/week5/issues"
+  },
+  "homepage": "https://github.com/simonematsukis/week5#readme"
 }
