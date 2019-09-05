@@ -16,7 +16,7 @@ app.listen(8080);
 //Configure MongoDB
 const MongoClient = mongodb.MongoClient;
 // Connection URL
-const url = "mongodb://" + process.argv[2]+":27017/";
+const url = "mongodb://localhost:27017/";
 //reference to the database
 let db;
 //Connect to mongoDB server
