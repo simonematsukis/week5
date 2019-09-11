@@ -1,0 +1,44 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <script src="Lab4.js"></script>
+</head>
+<body>
+        <img src="lab4.png">
+    <h1>List All Developers</h1>
+    <h3>Developers:
+        <table>
+            <tr>
+                <td>Developer ID</td>
+                <td>Full Name</td>
+                <td>Level</td>
+                <td>Address</td>
+            </tr>
+            <% for (var i=0; i< devDb.length;i++){ %>
+                <tr>
+                    <td>
+                        <%= devDb[i]._id %>
+                    </td>
+                    <td>
+                        <%= devDb[i].name.firstName + " " + devDb[i].name.lastName%>
+                    </td>
+                    <td>
+                        <%= devDb[i].level %>
+                    </td>
+                    <td>
+                        <%= devDb[i].address.unit + " " + devDb[i].address.street + " street, " + devDb[i].address.suburb + ", " + devDb[i].address.state%>
+                    </td>
+                    
+                    
+                </tr>
+                <% }%>
+            </table>
+    </h3>
+
+    <a href="/">Home</a> <br>
+    <a href="newtask.html">Add New Task</a> <br>
+    <a href="deleteByID.html">Delete Task By ID</a> <br>
+    <a href="deleteAll">Delete All Completed Tasks</a> <br>
+    <a href="updateStatus.html">Update Task Status</a> <br>
+</body>
+</html>

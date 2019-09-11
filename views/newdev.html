@@ -1,0 +1,33 @@
+<html>
+<head>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <img src="lab4.png">
+    <h1> Add a New Developer</h1>
+    </br>
+    <form action="/addNewDev" method="POST">
+    <label>Developer Name:</label><br>
+    <input type="text" name="firstname" placeholder="First Name"> 
+    <input type="text" name="lastname" placeholder="Last Name"><br><br>
+    <label>Developer Level:</label><br>
+    <input type="radio" name="level" value="Beginner" > <label> Beginner</label><br>
+    <input type="radio" name="level" value="Experienced" ><label> Experienced</label><br><br>
+    <label>Developer Address:</label><br>
+    <input type="text" name="state" placeholder="state"> 
+    <input type="text" name="suburb" placeholder="suburb">
+    <input type="text" name="street" placeholder="street">
+    <input type="text" name="unit" placeholder="unit"><br><br>
+    
+    <button>Submit</button>
+
+    </form>
+
+    <a href="/">Home</a> <br>
+    <a href="listtasks.html">List All Tasks</a> <br>
+    <a href="deleteByID.html">Delete Task By ID</a> <br>
+    <a href="deleteAll">Delete All Completed Tasks</a> <br>
+    <a href="updateStatus.html">Update Task Status</a> <br>
+    <a href="listdevs.html">List all Developers</a> <br>
+</body>
+</html>
