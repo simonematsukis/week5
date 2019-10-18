@@ -1,0 +1,87 @@
+<div class="jumbotron text-center">
+    <h1 >ACTORS</h1>
+  </div>
+  <!-- The navigation bar -->
+  <nav class="navbar navbar-expand-sm bg-light">
+    <ul class="navbar-nav">
+      <li class="nav-item" style="padding-left:0.2in">
+        <a class="btn btn-warning" (click)="changeSection(1)">Home</a>
+      </li>
+      <li class="nav-item" style="padding-left:0.2in">
+        <a class="btn btn-warning" (click)="changeSection(2)">Add Actor</a>
+      </li>
+      <li class="nav-item" style="padding-left:0.2in">
+        <a class="btn btn-warning" (click)="changeSection(3)">Update Actor</a>
+      </li>
+      <li class="nav-item" style="padding-left:0.2in">
+        <a class="btn btn-warning" (click)="changeSection(4)">Delete Actor</a>
+      </li>
+    </ul>
+  </nav>
+  <!-- First section: Display all in a tble -->
+  <div class="section" *ngIf="section==1">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Birth Year</th>
+      </tr>
+      <tr *ngFor="let item of actorsDB">
+        <td>{{item.name}}</td>
+        <td>{{item.bYear}}</td>
+      </tr>
+    </table>
+  </div>
+  <!-- Second Section: Add new actor -->
+  <div class="section" *ngIf="section==2">
+    <div class="form-group">
+      <label for="actorName">Full Name</label>
+      <input type="text" class="form-control" id="actorName" [(ngModel)]="fullName">
+    </div>
+    <div class="form-group">
+      <label for="actorName">Birth Year</label>
+      <input type="number" class="form-control" id="actorName" [(ngModel)]="bYear">
+    </div>
+    <button type="submit" class="btn btn-warning" (click)="onSaveActor()">Save Actor</button>
+  </div>
+  <!-- Section 3: Update actor -->
+  <div class="section" *ngIf="section==3">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Birth Year</th>
+        <th>Select!</th>
+      </tr>
+      <tr *ngFor="let item of actorsDB">
+        <td>{{item.name}}</td>
+        <td>{{item.bYear}}</td>
+        <td><button type="submit" class="btn btn-warning" (click)="onSelectUpdate(item)">Update</button></td>
+      </tr>
+    </table>
+    <hr>
+    <div *ngIf="actorsDB.length>0">
+      <div class="form-group">
+        <label for="actorName">Full Name</label>
+        <input type="text" class="form-control" id="actorName" [(ngModel)]="fullName">
+      </div>
+      <div class="form-group">
+        <label for="actorName">Birth Year</label>
+        <input type="number" class="form-control" id="actorName" [(ngModel)]="bYear">
+      </div>
+      <button type="submit" class="btn btn-warning" (click)="onUpdateActor()">Update Actor</button>
+    </div>
+  </div>
+  <!-- Section 4: Delete Actor -->
+  <div class="section" *ngIf="section==4">
+    <table class="table table-striped">
+      <tr>
+        <th>Name</th>
+        <th>Birth Year</th>
+        <th>Delete?</th>
+      </tr>
+      <tr *ngFor="let item of actorsDB">
+        <td>{{item.name}}</td>
+        <td>{{item.bYear}}</td>
+        <td><button type="submit" class="btn btn-warning" (click)="onDeleteActor(item)">Delete</button></td>
+      </tr>
+    </table>
+  </div>

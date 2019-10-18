@@ -1,0 +1,55 @@
+<div class = "books">
+    <br>
+    <h1>Books Management System</h1>
+  <div class="form-group">
+    <br>
+    <label for="item">Title:</label>
+    <input class="form-control" [(ngModel)]="item" id="item" /> <br>
+    <label for="date">Publication date:</label>
+    <input type="date" class="form-control" [(ngModel)]="date" id="date" /> <br>
+    <label for="type">Select Book Type</label>
+    <select class="form-control" [(ngModel)]="type" id="type"> <br>
+      <option value='Paper Back'>Paper Back</option>
+      <option value='Hard Cover'>Hard Cover</option>
+    </select> <br>
+    <label for="summary">Book Summary:</label>
+    <textarea type="date" class="form-control" [(ngModel)]="summary" id="summary"></textarea> <br>
+
+
+  <br>
+  <p class="centre" >
+  <button class="btn btn-light btn-space"  (click)="newItem()" >Save Book {{data.length}}</button>
+  <button class="btn btn-dark btn-space" (click)="deleteAllHard()">Delete Hard Cover {{counter}}</button>
+  </p>
+  <br>
+</div>
+
+  <table class="table table-hover">
+    <tr>
+      <th> # </th>
+      <th> TITLE </th>
+      <th> PUBLICATION DATE </th>
+      <th> BOOK TYPE </th>
+      <th> BOOK SUMMARY </th>
+      <th> DELETE? </th>
+    </tr>
+    <tr *ngFor="let item of data; let i = index">
+      <td>{{i+1}}</td>
+      <td>{{item.item}}</td>
+      <td>{{item.date}}</td>
+      <td>{{item.type}}</td>
+      <td>{{item.summary}}</td>
+      <td><button class="btn btn-danger btn-space" (click)="deleteElement(i)">Delete?</button></td>
+    </tr>
+  </table>
+  
+  <div class = "books">
+    <br><br><br><br><br><br><br>
+  </div>
+</div>
+
+
+<hr>
+
+
+

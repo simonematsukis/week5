@@ -1,0 +1,23 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+
+.books {
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: lightgrey;
+}
+
+h1{
+    text-align: center;
+}
+
+.centre {
+    text-align: center;
+}
+
+.btn-space {
+    margin-right: 5px;
+}
+
+table {
+    text-align: center;
+}
